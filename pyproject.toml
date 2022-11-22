@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cloud-loader"
+version = "0.0.0"
+description = "Tool for loading data from Dropbox in a configurable way"
+authors = ["Omegastick"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cloud_loader"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.7.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
