@@ -16,12 +16,13 @@ def clone(
     base_dest_path: str = "./",
     config_path: str = "cloud_cloner.yaml",
     rclone_config_path: str = "~/.rclone",
+    ignore_default: bool = False,
 ) -> None:
     config = load_config(config_path)
     rclone_config = load_rclone_config(rclone_config_path)
 
     for clone in config.clones:
-        if clone.default or clone.name in clones:
+        if (clone.default and not ignore_default) or clone.name in clones:
             print(f"Cloning {clone.name}...")
             for path in clone.paths:
                 src_path = Path(config.base_path) / Path(path.src)
