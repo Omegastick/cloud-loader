@@ -10,6 +10,7 @@ packages = [{include = "cloud_loader"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 typer = {extras = ["all"], version = "^0.7.0"}
+python-rclone = "^0.0.2"
 
 
 [build-system]

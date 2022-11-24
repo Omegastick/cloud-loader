@@ -40,6 +40,14 @@ python-versions = ">=3.6"
 plugins = ["importlib-metadata"]
 
 [[package]]
+name = "python-rclone"
+version = "0.0.2"
+description = "Rclone wrapper for python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "rich"
 version = "12.6.0"
 description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
@@ -85,7 +93,7 @@ test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "137cdbea238afd55086f5716452fe10a3a29bab25df7dd8ea0b5f0553b6d6e14"
+content-hash = "5540506bb9f6b51ade41fa12724255aa35add154ada0e98a8f0a8283de61a4be"
 
 [metadata.files]
 click = [
@@ -103,6 +111,10 @@ commonmark = [
 pygments = [
     {file = "Pygments-2.13.0-py3-none-any.whl", hash = "sha256:f643f331ab57ba3c9d89212ee4a2dabc6e94f117cf4eefde99a0574720d14c42"},
     {file = "Pygments-2.13.0.tar.gz", hash = "sha256:56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"},
+]
+python-rclone = [
+    {file = "python-rclone-0.0.2.tar.gz", hash = "sha256:210e8c613f0f8b541b7caad402c4b7c841e259a11f831668472288bcc808c597"},
+    {file = "python_rclone-0.0.2-py3-none-any.whl", hash = "sha256:899a80c7212a9e377206b31aece3bfba80396e57c78ec5b9ad6f6c9fe8a4f772"},
 ]
 rich = [
     {file = "rich-12.6.0-py3-none-any.whl", hash = "sha256:a4eb26484f2c82589bd9a17c73d32a010b1e29d89f1604cd9bf3a2097b81bb5e"},
