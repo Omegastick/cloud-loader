@@ -1,4 +1,4 @@
-A tool for cloning data from Dropbox in a configurable way.
+A tool for cloning data from cloud storage providers in a configurable way.
 
 Example config file:
 ```yaml
