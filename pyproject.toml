@@ -1,16 +1,17 @@
 [tool.poetry]
-name = "cloud-loader"
+name = "cloud-cloner"
 version = "0.0.0"
-description = "Tool for loading data from Dropbox in a configurable way"
+description = "Tool for cloning data from Dropbox in a configurable way"
 authors = ["Omegastick"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "cloud_loader"}]
+packages = [{include = "cloud_cloner"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 typer = {extras = ["all"], version = "^0.7.0"}
 python-rclone = "^0.0.2"
+pyyaml = "^6.0"
 
 
 [build-system]
