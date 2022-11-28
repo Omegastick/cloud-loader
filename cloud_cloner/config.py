@@ -1,23 +1,26 @@
+from dataclasses import dataclass, field
 from typing import List
 
 import yaml
-from pydantic import BaseModel
 
 
-class ClonePath(BaseModel):
+@dataclass
+class ClonePath:
     src: str
     dest: str
 
 
-class Clone(BaseModel):
+@dataclass
+class Clone:
     name: str
     paths: List[ClonePath]
     default: bool = False
 
 
-class Config(BaseModel):
+@dataclass
+class Config:
     base_path: str = ""
-    clones: List[Clone]
+    clones: List[Clone] = field(default_factory=list)
 
 
 def load_config(path: str) -> Config:
