@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cloud-cloner"
-version = "0.0.0"
-description = "Tool for cloning data from Dropbox in a configurable way"
+version = "0.1.1"
+description = "Tool for cloning data from cloud storage services in a configurable way"
 authors = ["Omegastick"]
 license = "MIT"
 readme = "README.md"
