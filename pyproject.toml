@@ -12,7 +12,11 @@ python = "^3.9"
 typer = {extras = ["all"], version = "^0.7.0"}
 python-rclone = "^0.0.2"
 pyyaml = "^6.0"
+dacite = "^1.6.0"
 
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core"]

@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 
 import yaml
+from dacite import from_dict
 
 
 @dataclass
@@ -26,4 +27,4 @@ class Config:
 def load_config(path: str) -> Config:
     with open(path) as f:
         config = yaml.safe_load(f)
-    return Config(**config)
+    return from_dict(Config, config)
