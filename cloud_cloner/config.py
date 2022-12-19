@@ -9,6 +9,7 @@ from dacite import from_dict
 class ClonePath:
     src: str
     dest: str
+    remote: str = "remote"
 
 
 @dataclass

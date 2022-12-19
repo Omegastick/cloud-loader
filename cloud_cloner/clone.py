@@ -34,6 +34,8 @@ def clone(
                     os.makedirs(dest_directory)
 
                 print(f"Cloning {src_path} to {dest_path}...", end="\x1b[1K\r", flush=True)
-                rclone.with_config(rclone_config).copy(f"remote:{src_path}", str(dest_path), flags=["--checksum"])
+                rclone.with_config(rclone_config).copy(
+                    f"{path.remote}:{src_path}", str(dest_path), flags=["--checksum"]
+                )
                 print(f"Cloned {src_path} to {dest_path}")
             print()

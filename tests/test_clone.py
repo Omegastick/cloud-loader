@@ -108,3 +108,25 @@ def test_clone_clones_multiple_directories(mock_rclone, mock_load_config, mock_l
             call("remote:base/src2", "dest2", flags=["--checksum"]),
         ]
     )
+
+
+def test_clone_respects_multiple_remotes(mock_rclone, mock_load_config, mock_load_rclone_config):
+    mock_load_config.return_value = Config(
+        base_path="base",
+        clones=[
+            Clone(
+                name="test",
+                paths=[
+                    ClonePath(src="src", dest="dest", remote="remote2"),
+                    ClonePath(src="src2", dest="dest2"),
+                ],
+            ),
+        ],
+    )
+    clone(["test"])
+    mock_rclone.copy.assert_has_calls(
+        [
+            call("remote2:base/src", "dest", flags=["--checksum"]),
+            call("remote:base/src2", "dest2", flags=["--checksum"]),
+        ]
+    )
