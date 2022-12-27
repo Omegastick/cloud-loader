@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cloud-cloner"
-version = "0.2.0"
+version = "0.3.0"
 description = "Tool for cloning data from cloud storage services in a configurable way"
 authors = ["Omegastick"]
 license = "MIT"
